@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 ?????????????????????
 """
@@ -5,6 +6,15 @@
 import numpy as np
 import pandas as pd
 import os
+import sys
+
+# ?????????UTF-8???????
+if sys.version_info >= (3, 7):
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8')
+
 from timeseries_trend_analysis_extended import (
     calculate_churn_features,
     TimeSeriesTrendAnalyzer,
